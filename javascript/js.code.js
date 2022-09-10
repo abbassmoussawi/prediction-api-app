@@ -1,8 +1,10 @@
-document.getElementById('button').addEventListener('click', predictName);
+document.getElementById('button').addEventListener('click', predictAge);
 
-function predictName() {
+function predictAge() {
     let name = document.getElementById('name')
-    fetch('https://api.agify.io/?name=' + name.value, { method: 'GET' })
+
+    //First fetch() to guess the age
+    fetch('https://api.agify.io/?name=' + name.value)
         .then(response => response.json())
         .then(data => {
             if (name != '') {
