@@ -29,7 +29,18 @@ function predictPersonalInfo() {
             }
         })
 
+    //Third fetch() to guess the nationality
+    fetch('https://api.nationalize.io/?name=' + name.value)
+        .then(response => response.json())
+        .then(data => {
+            if (name != '') {
+                nationality.innerHTML = "and your nationality is " + data.country[0].country_id + " or " + data.country[1].country_id;
+                console.log(data.nationality);
 
+            } else {
+                nationality.style.display = 'none';
+            }
+        })
 
 
 };
