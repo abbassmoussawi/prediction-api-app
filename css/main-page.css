@@ -1,4 +1,42 @@
-* body {
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+body {
     background: url('images/bg-2.jpg') no-repeat center fixed;
     background-size: cover;
+}
+
+a {
+    text-decoration: none;
+    background-color: black;
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+.flex-nav {
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-nav li {
+    text-decoration: none;
+    padding: 3vw;
+    font-size: 3vw;
+}
+
+.body-paragraph {
+    text-align: center;
+    font-style: italic;
+    color: bisque;
+    font-size: 4vw;
+    padding: 2px;
+    font-family: 'Courier New', Courier, monospace;
 }
