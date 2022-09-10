@@ -1,4 +1,6 @@
-fetch('https://dog.ceo/api/breeds/image/random');
+fetch('https://dog.ceo/api/breeds/' + 'image/random')
+    .then(response => response.json())
+    .then(JSON => imageDog.src = JSON.message);
 
 
 document.getElementById('button').addEventListener('click', predictPersonalInfo);
