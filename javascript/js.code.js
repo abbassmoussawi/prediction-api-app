@@ -2,7 +2,6 @@ fetch('https://dog.ceo/api/breeds/' + 'image/random')
     .then(response => response.json())
     .then(JSON => imageDog.src = JSON.message);
 
-
 document.getElementById('button').addEventListener('click', predictPersonalInfo);
 
 function predictPersonalInfo() {
@@ -13,7 +12,7 @@ function predictPersonalInfo() {
         .then(response => response.json())
         .then(data => {
             if (name != '') {
-                age.innerHTML = "I guess your age is " + data.age + ",";
+                age.innerHTML = "Your age is: " + data.age + ",";
                 console.log(data.age);
             } else {
                 age.style.display = 'none';
@@ -24,7 +23,7 @@ function predictPersonalInfo() {
         .then(response => response.json())
         .then(data => {
             if (name != '') {
-                gender.innerHTML = "your gender is " + data.gender;
+                gender.innerHTML = "Gender is: " + data.gender;
                 console.log(data.gender);
             } else {
                 gender.style.display = 'none';
@@ -36,13 +35,11 @@ function predictPersonalInfo() {
         .then(response => response.json())
         .then(data => {
             if (name != '') {
-                nationality.innerHTML = "and your nationality is " + data.country[0].country_id + " or " + data.country[1].country_id;
+                nationality.innerHTML = "Nationality is: " + data.country[0].country_id + " or " + data.country[1].country_id;
                 console.log(data.nationality);
 
             } else {
                 nationality.style.display = 'none';
             }
         })
-
-
 };
