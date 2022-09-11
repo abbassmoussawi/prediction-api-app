@@ -4,6 +4,7 @@ fetch('https://dog.ceo/api/breeds/' + 'image/random')
 
 document.getElementById('button').addEventListener('click', predictPersonalInfo);
 
+//Create predictPersonalInfo() in order to use fetch() inside it
 function predictPersonalInfo() {
     let name = document.getElementById('name')
 
