@@ -5,23 +5,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/main-page.css">
+    <title>API-Web</title>
 </head>
 
 <body>
-    <label for "name">Please insert your name to guess your age and nationality :)</label>
+    <header>
+        <nav>
+            <ul class="flex-nav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <p class="header-title">Let Me Guess </p>
+    <section class="body">
 
-    <input type="text" id="name" class="name">
+        <div class="form">
+            <label for="name">
+                <p class="body-paragraph">Please insert your name to guess your age, gender and nationality :)</p>
+            </label>
+            <input type="text" id="name" class="inputText" placeholder="Name">
+            <button id="button" class="button-guess">Guess</button>
+        </div>
 
-    <button id="button"><p>Let'me Predict Your Age</p> </button>
-    <img id="imageDog"></img>
-    <div id="age"></div>
-    <div id="gender"></div>
-    <div id="nationality"></div>
+        <div>
+            <ul class="guess-result">
+                <li id="age">
+                </li>
+                <li id="gender">
+                </li>
+                <li id="nationality">
 
+                </li>
+            </ul>
+        </div>
 
-
-
+    </section>
+    <div>
+        <img id="imageDog" class="dogImage"></img>
+    </div>
+    <footer>
+        <div class="footer">
+        </div>
+    </footer>
     <script src="javascript/js.code.js"></script>
 </body>
 
